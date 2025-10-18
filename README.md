@@ -1,10 +1,8 @@
 ### 这是一个自动构建GKI内核的仓库
 
-> 非GKI可以尝试[SukiSU云盘](https://alist.shirkneko.top)的资源，不支持一加ColorOS14、15
+> 一加用户可以fork本项目后自行使用action中Build OnePlus SukiSU Ultra 构建
 >
-> 第一次使用务必**详细阅读**以下内容，不要因为懒惰而占用他人时间！
->
-> 最近更新：1.一加8ELITE处理器可使用6.6内核(未测试)、2.修复这些GKI版本编译报错——[5.10.(66、81、101)、5.15.(74、94、104)]
+
 ### 下载
 可以[在此](https://github.com/zzh20188/GKI_KernelSU_SUSFS/releases)下载您的资源
 1. 关于Anykernel3.zip，下载即用！

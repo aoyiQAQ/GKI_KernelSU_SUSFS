@@ -101,6 +101,7 @@ jobs:
                 "use_zram": "true",
                 "use_kpm": "false",
                 "use_O2": "true",
+                "BBG": "true",
                 "get_manager": "true"
               }
             }'

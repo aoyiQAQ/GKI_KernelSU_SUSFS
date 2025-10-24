@@ -42,7 +42,11 @@ on:
         required: false
         type: boolean
         default: false
-
+      BBG:
+        description: "是否启用内核层面阻止对关键分区/设备节点的非法写入(LSM)？"
+        required: true
+        type: boolean
+        default: true
 
 jobs:
   build-kernel-a15-6-6-kernelsu-susfs:
@@ -87,3 +91,4 @@ jobs:
       use_kpm: ${{ inputs.use_kpm }}
       supp_op: ${{ inputs.supp_op }}
       use_O2: ${{ inputs.use_O2 || false }}
+      BBG: ${{ inputs.BBG || true }}

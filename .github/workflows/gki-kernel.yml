@@ -524,14 +524,15 @@ jobs:
           cd "$CONFIG"
           
           # 构建时间
+          BUILD_TIME=$(TZ='Asia/Shanghai' date +"%Y%m%d%H%M")
           CURRENT_TIME=$(TZ='Asia/Shanghai' date +"%a %b %d %H:%M:%S UTC+8 %Y")
-
+          
           if [ ! -z ${{ inputs.version }} ]; then
             echo "版本号不为空"
             sed -i '$s|echo "\$res"|echo "${{ inputs.version }}"|' ./common/scripts/setlocalversion
           else
             echo "版本号为空，使用默认值"
-            sed -i '$s|echo "\$res"|echo "\$res-${{ github.repository_owner }}-${{ github.ref_name }}-'"$CURRENT_TIME"'"|' ./common/scripts/setlocalversion
+            sed -i '$s|echo "\$res"|echo "\$res-${{ github.repository_owner }}-'"$BUILD_TIME"'"|' ./common/scripts/setlocalversion
           fi
 
           echo "CURRENT_TIME=$CURRENT_TIME"

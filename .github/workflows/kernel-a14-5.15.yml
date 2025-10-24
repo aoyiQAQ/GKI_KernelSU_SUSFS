@@ -83,6 +83,5 @@ jobs:
       version: ${{ inputs.version || '' }}
       use_zram: ${{ inputs.use_zram }}
       use_kpm: ${{ inputs.use_kpm }}
-      supp_op: ${{ inputs.supp_op || false }}
       use_O2: ${{ inputs.use_O2 || false }}
       BBG: ${{ inputs.BBG || true }}

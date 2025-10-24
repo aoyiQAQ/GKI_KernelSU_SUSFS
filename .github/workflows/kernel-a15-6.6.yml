@@ -37,11 +37,6 @@ on:
         required: true
         type: boolean
         default: false
-      supp_op:
-        description: '是否开启一加8E处理器机型支持?(非该机型无须勾)'
-        required: false
-        type: boolean
-        default: false
       BBG:
         description: "是否启用内核层面阻止对关键分区/设备节点的非法写入(LSM)？"
         required: true
@@ -89,6 +84,5 @@ jobs:
       version: ${{ inputs.version || '' }}
       use_zram: ${{ inputs.use_zram }}
       use_kpm: ${{ inputs.use_kpm }}
-      supp_op: ${{ inputs.supp_op }}
       use_O2: ${{ inputs.use_O2 || false }}
       BBG: ${{ inputs.BBG || true }}

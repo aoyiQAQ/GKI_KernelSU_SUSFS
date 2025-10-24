@@ -188,7 +188,7 @@ jobs:
         -> jit-zygote-cache 检测对抗
         -> O2编译优化 ${{ inputs.use_O2 && '启用' || '未启用' }}
         -> KPM ${{ inputs.use_kpm && ' 支持' || '不支持' }}
-        -> Baseband-guard(BBG) 支持(防止对特定分区的未授权写入)
+        -> Baseband-guard(BBG) 支持 ${{ inputs.BBG && '启用' || '未启用' }}
         -> bbr算法支持(默认不开启)
         -> westwood算法支持(默认不开启)
         -> ZRAM算法拓展**LZ4KD&ONEPLUS_LZ4K**  ${{ inputs.use_zram && '支持' || '不支持' }}
